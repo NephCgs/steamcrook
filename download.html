@@ -1,1 +1,205 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Profile Clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Motiva+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Additional CSS (embedded here for convenience) */
+        .download-manager-container {
+            background-color: rgba(23, 26, 33, 0.85); /* 85% transparent black */
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-item {
+            display: flex;
+            align-items: center;
+            background-color: #1b2838;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .download-info {
+            flex-grow: 1;
+        }
+
+        .download-title {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .download-progress-container {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .download-progress-bar {
+            background-color: #3c3f41;
+            border-radius: 5px;
+            height: 10px;
+            width: 70%;
+            margin-right: 10px;
+            overflow: hidden;
+        }
+
+        .download-progress {
+            background-color: #67abd0;
+            border-radius: 5px;
+            height: 100%;
+            width: 0;
+            transition: width 0.4s ease;
+        }
+
+        .download-completed {
+            font-size: 14px;
+            color: #67abd0;
+        }
+
+        .download-action-button {
+            background-color: #67abd0;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .download-action-button.pause {
+            background-color: #d06767;
+        }
+
+        .download-action-button.resume {
+            background-color: #67d067;
+        }
+
+        .download-action-button.play {
+            background-color: #6790d0;
+        }
+    </style>
+</head>
+<body style="background-image: url('assets/img/shap.jpg'); background-size: cover; background-repeat: no-repeat; background-color: #1b2838; color: #c7d5e0; margin: 0; padding: 0;">
+    <div class="container">
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Steam</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="profile.html">Shapapi Manyenyo</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#" class="active">Downloads</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="download-manager-container">
+            <h2>Download Manager</h2>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game1.jpg" alt="The Outlast Trials">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">The Outlast Trials</h1>
+                    <div class="download-progress-container">
+                        <div class="download-progress-bar">
+                            <div class="download-progress" style="width: 60%;"></div>
+                        </div>
+                        <div class="download-completed">60% Completed</div>
+                    </div>
+                </div>
+                <button class="download-action-button pause">Pause</button>
+            </div>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game2.jpg" alt="Mortal Kombat 11">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">Mortal Kombat 11</h1>
+                    <div class="download-progress-container">
+                        <div class="download-progress-bar">
+                            <div class="download-progress" style="width: 100%;"></div>
+                        </div>
+                        <div class="download-completed">Download Complete</div>
+                    </div>
+                </div>
+                <button class="download-action-button play">Play</button>
+            </div>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game3.jpg" alt="The Sims 4">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">The Sims 4</h1>
+                    <div class="download-progress-container">
+                        <div class="download-progress-bar">
+                            <div class="download-progress" style="width: 40%;"></div>
+                        </div>
+                        <div class="download-completed">40% Completed</div>
+                    </div>
+                </div>
+                <button class="download-action-button resume">Resume</button>
+            </div>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game4.jpg" alt="Farming Simulator 22">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">Farming Simulator 22</h1>
+                    <div class="download-progress-container">
+                      <div class="download-progress-bar">
+                        <div class="download-progress" style="width: 100%;"></div>
+                    </div>
+                    <div class="download-completed">Download Complete</div>
+                </div>
+                </div>
+                <button class="download-action-button play">Play</button>
+            </div>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game5.jpg" alt="Supermarket Simulator">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">Supermarket Simulator</h1>
+                    <div class="download-progress-container">
+                        <div class="download-progress-bar">
+                            <div class="download-progress" style="width: 10%;"></div>
+                        </div>
+                        <div class="download-completed">10% Completed</div>
+                    </div>
+                </div>
+                <button class="download-action-button pause">Pause</button>
+            </div>
+
+            <div class="download-item">
+                <div class="download-avatar">
+                    <img src="assets/img/game6.jpg" alt="Counter Strike 2">
+                </div>
+                <div class="download-info">
+                    <h1 class="download-title">Counter Strike 2</h1>
+                    <div class="download-progress-container">
+                        <div class="download-progress-bar">
+                            <div class="download-progress" style="width: 90%;"></div>
+                        </div>
+                        <div class="download-completed">90% Completed</div>
+                    </div>
+                </div>
+                <button class="download-action-button resume">Resume</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
